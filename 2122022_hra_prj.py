@@ -1,33 +1,44 @@
 import random
 
-f = open('hihi.txt', 'r')
-hl = f.read()
-
-print("--------------------------")
-print("|                        |")
-print("|      Mária ChatBox     |")
-print("|                        |")
-print("--------------------------")
-n = input("Zadaj svoje meno: ")
-
 list = ["Choď sa osprchovať", "Už si sa sprchoval?", "To čo máte chlapci?", "A to ako vám napadlo?", "Chlapci už zhasnínajte",
-        "Ideš na omšu?", "JARO HARAAG!!", f'Zavolám vychošovi, {n}',"Povysávať a potom aj umyť podlahu!", f"Zavolám otcovi, {n}",
-        "Bol si v sprche", "Neviem ti odpovedať", "Ideš na šport?"]
-print("Ahoj, ", n)
-t = input()
-if len(t)==0:
-    exit()
+        "Ideš na omšu?", "JARO HARAAG!!", 'Zavolám vychošovi, %',"Povysávať a potom aj umyť podlahu!", "Zavolám otcovi, %",
+        "Bol si v sprche", "Neviem ti odpovedať", "Ideš na šport?", "Ideš do kaplnky?", "Pustím ťa do kaplnky"]
 
-while len(t)>=1:
-    n = input()
-    if n.isalpha() == "Nie" or "nie" or "nn" in list[1:2]:
-        print("Máš čas do 21:3O!!!")
-    if n == ["Ahoj", "Čau", "cc"]:
-        print("Ako sa máš?")
-    print(random.choice(list))
-    if len(n)==0:
-        break
+def hra():    
+    print("--------------------------")
+    print("|                        |")
+    print("|      Mária ChatBox     |")
+    print("|                        |")
+    print("--------------------------")
+    n = input("Zadaj svoje meno: ")
+    chat(n)
 
+def chat(n):
+    print("Mária: Ahoj, ", n, "\n")
+    t = input(n + ": ")
+    print("Mária: ", random.choice(list).replace("%", n))
+    tt = input(n + ": ")
+    while len(tt)>=1:
+        if tt == ["Nie", "nie", "nn"] in list[1:2]:
+            print("Mária: Máš čas do 21:30!!")
+        elif tt == ["Ahoj", "čau", "cc"]:
+            print("Mária: Ako si sa mal v škole?")
+        elif tt == "Pozdrav Pán Boh":
+            print("Mária: POZDRAV PÁÁÁÁÁÁN BOH")
+        else:
+            print("Mária: ", random.choice(list).replace("%", n))
+            tt
+
+    if len(tt) == 0:
+        exit
+
+def repeat():
+    hh = input("Pre spustenie programu zadaj heslo:\n")
+    while hh != "MARIA":
+        hh = input("Zlé heslo opakuj\n")
+    hra()
+
+repeat()
 
 
 
