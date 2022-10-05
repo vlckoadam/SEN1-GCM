@@ -35,7 +35,7 @@ def chat(n):
             print("Mária: POZDRAV PÁÁÁÁÁÁN BOH")
         else:
             print("Mária: ", random.choice(list).replace("%", n))
-            tt
+            tt = input(n + ": ")
 
     if len(tt) == 0:
         koniec()
