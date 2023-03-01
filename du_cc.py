@@ -21,11 +21,4 @@ min_y = min(point[1] for point in points)
 max_y = max(point[1] for point in points)
 canvas.create_rectangle(min_x, min_y, max_x, max_y)
 
-# Vykreslenie všetkých bodov vnútri obdĺžnika
-for i in range(1000):
-    x = random.randint(min_x, max_x)
-    y = random.randint(min_y, max_y)
-    if (x, y) not in points:
-        canvas.create_oval(x-1, y-1, x+1, y+1, fill='red')
-
 root.mainloop()
