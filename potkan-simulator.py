@@ -2,7 +2,24 @@ import random
 import time
 import os
 
-os.system("clear")
+# JAZYKY + MAIN LOBBY
+
+def svk():
+    print("####################################################")
+    print("#          🐀 SIMULÁCIA ŽIVOTA POTKANA 🐀         #")
+    print("#                                                  #")
+    print("#                                                  #")
+    print("#        🐀 STLAČ [A] PRE SPUSTENIE HRY 🐀        #")
+    print("#        🐀 STLAČ [X] PRE SKONČENIE HRY 🐀        #")
+    print("#        🐀 STLAČ [L] PRE ZMENU JAZYKA🐀          #")
+    print("#                                                  #")
+    print("#                                                  #")
+    print("####################################################")
+    choose_eng = input("              Choose your answer:        ")
+    if choose_eng == "A":
+        hra_eng()   
+
+
 def eng():
     print("####################################################")
     print("#            🐀 POTKAN LIFE SIMULATOR 🐀          #")
@@ -14,7 +31,9 @@ def eng():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-
+    choose_eng = input("              Choose your answer:        ")
+    if choose_eng == "A":
+        hra_eng()
 def rus():
     print("####################################################")
     print("#          🐀 СИМУЛЯТОР КРЫСИНОЙ ЖИЗНИ 🐀         #")
@@ -26,7 +45,8 @@ def rus():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    
+    choose_rus = input("              Choose your answer:        ")
+
 def hun():
     print("####################################################")
     print("#          🐀 PÁTKÁNY ÉLET SZIMULÁTOR  🐀         #")
@@ -38,6 +58,7 @@ def hun():
     print("#        🐀 A NYELV MEGVÁLTOZTATÁSÁHOZ 🐀         #")
     print("#                                                  #")
     print("####################################################")
+    choose_hun = input("              Choose your answer:        ")
 
 def ar():
     print("####################################################")
@@ -49,4 +70,39 @@ def ar():
     print("#           🐀 Nاضغط [L] لتغيير اللغة 🐀         #")
     print("#                                                  #")
     print("####################################################")
-    
+    choose_ar = input("              Choose your answer:        ")
+
+
+
+# INITIAL LANG SETUP
+os.system("clear")
+print("####################################################")
+print("#            🐀 POTKAN LIFE SIMULATOR 🐀          #")
+print("#                                                  #")
+print("#                                                  #")
+print("#              🐀  [1] SLOVAK    🐀               #")
+print("#              🐀  [2] ENGLISH   🐀               #")
+print("#              🐀  [3] RUSSIAN   🐀               #")
+print("#              🐀  [4] HUNGARIAN 🐀               #")
+print("#              🐀  [5] ARABIC    🐀               #")
+print("#                                                  #")
+print("#                                                  #")
+print("####################################################")
+
+choose = int(input("              Choose your language:        "))
+if choose == 1:
+    os.system("clear")
+    svk()
+elif choose == 2:
+    os.system("clear")
+    eng()
+elif choose == 3:
+    os.system("clear")
+    rus()
+elif choose == 4:
+    os.system("clear")
+    hun()
+elif choose == 5:
+    os.system("clear")
+    ar()
+
