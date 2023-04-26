@@ -15,9 +15,9 @@ def svk():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    choose_eng = input("              Choose your answer:        ")
-    if choose_eng == "A":
-        hra_eng()   
+    choose_svk = input("              Choose your answer:        ")
+    if choose_svk == "A":
+        hra_svk()   
 
 
 def eng():
@@ -31,7 +31,7 @@ def eng():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    choose_eng = input("              Choose your answer:        ")
+    choose_eng = input("              Vyber si odpoveď:        ")
     if choose_eng == "A":
         hra_eng()
 def rus():
@@ -45,7 +45,7 @@ def rus():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    choose_rus = input("              Choose your answer:        ")
+    choose_rus = input("             Oтвечaй:        ")
 
 def hun():
     print("####################################################")
@@ -58,7 +58,7 @@ def hun():
     print("#        🐀 A NYELV MEGVÁLTOZTATÁSÁHOZ 🐀         #")
     print("#                                                  #")
     print("####################################################")
-    choose_hun = input("              Choose your answer:        ")
+    choose_hun = input("              Válsz:        ")
 
 def ar():
     print("####################################################")
@@ -70,7 +70,7 @@ def ar():
     print("#           🐀 Nاضغط [L] لتغيير اللغة 🐀         #")
     print("#                                                  #")
     print("####################################################")
-    choose_ar = input("              Choose your answer:        ")
+    choose_ar = input("              أَجِبْ:        ")
 
 
 
